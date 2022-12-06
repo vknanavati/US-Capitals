@@ -50,29 +50,26 @@ def learn():
         "Wisconsin": "Madison",
         "Wyoming": "Cheyenne",
     }
-    user = input("Please enter a US state: ")
-
-    if user in DataSet:
-        print(DataSet[user])
-    else:
-        print("No such state in the USA. Please enter a valid state.")
+    while True:
+        user = input("Please enter US State: ").title()
+        if user not in DataSet:
+            print("\nNot a valid state try again.\n")
+            continue
+        else:
+            break
+    print(user + "'s capital is: " + DataSet[user] + ".")
 
 
 learn()
 
-"""
 
-renamed function to learn(),
-renamed variable containing input(),
-removed .keys() method and switched to syntax that iterates dirrectly through dictionary,
-verified that function works.
+# Capitilized first letter of lower case input
+# Prompt user input to run until valid response given
+# Answer in full sentence
 
-Need to do:
-welcome message,
-format answer into a full sentence instead of one word,
-how to restart app if user inputs invalid state i.e., how to prompt input line to run again.
-create def main() best practices
-"""
+# Need to do:
+# welcome message,
+# create def main() best practices
 
 
 # def welcome_message():
