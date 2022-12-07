@@ -1,3 +1,11 @@
+def welcome_message():
+    print("\nWelcome to U.S.A State Capitals!")
+    print("\nEnter the name of a U.S. state to learn its capital.")
+
+
+welcome_message()
+
+
 def learn():
     DataSet = {
         "Alabama": "Montgomery",
@@ -51,31 +59,41 @@ def learn():
         "Wyoming": "Cheyenne",
     }
     while True:
-        user = input("Please enter US State: ").title()
+        user = input("\nPlease enter US State: ").title()
         if user not in DataSet:
             print("\nNot a valid state try again.\n")
             continue
         else:
+            print(user + "'s capital is: " + DataSet[user] + ".")
+
+        choice = input(
+            "Ready to learn another capital? Type Y for 'yes' and N for 'no': "
+        ).capitalize()
+        if choice == "Y":
+            continue
+        else:
             break
-    print(user + "'s capital is: " + DataSet[user] + ".")
+    print("\nThank you for visiting US State Capitals. Come back soon!")
 
 
 learn()
 
 
-# Capitilized first letter of lower case input
-# Prompt user input to run until valid response given
-# Answer in full sentence
+# Added option to stay or leave
+# Space between lines
+# Added welcome message
+# Added goodbye message
+# Questions for Sebby-is that too much to put in one definition? serparate def for closing message?
 
 # Need to do:
-# welcome message,
 # create def main() best practices
 
 
-# def welcome_message():
-#     print("Welcome to U.S.A State Capitals!")
-#     print("Enter the name of a U.S. state to learn its capital.")
-
-
-# def main():
-#     welcome_message()
+# while True:
+#         user = input("Please enter US State: ").title()
+#         if user not in DataSet:
+#             print("\nNot a valid state try again.\n")
+#             continue
+#         else:
+#             break
+#     print(user + "'s capital is: " + DataSet[user] + ".")
