@@ -1,6 +1,6 @@
 def welcome_message():
-    print("\nWelcome to U.S.A State Capitals!")
-    print("\nEnter the name of a U.S. state to learn its capital.")
+    print("\nWelcome to Capitals of the United States!")
+    print("Enter a US state below to learn it's capital.")
 
 
 welcome_message()
@@ -59,15 +59,15 @@ def learn():
         "Wyoming": "Cheyenne",
     }
     while True:
-        user = input("\nPlease enter US State: ").title()
+        user = input("\nState: ").title()
         if user not in DataSet:
-            print("\nNot a valid state try again.\n")
+            print("\nOops! Not a valid state, please try again.\n")
             continue
         else:
-            print(user + "'s capital is: " + DataSet[user] + ".")
+            print("\n" + user + "'s capital is: " + DataSet[user] + ".")
 
         choice = input(
-            "Ready to learn another capital? Type Y for 'yes' and N for 'no': "
+            "\nWould you like to learn another capital? Type Y for 'yes' and N for 'no': "
         ).capitalize()
         if choice == "Y":
             continue
@@ -79,14 +79,14 @@ def learn():
 learn()
 
 
-# Added option to stay or leave
-# Space between lines
-# Added welcome message
-# Added goodbye message
+# Formatted spacing between lines with \n
+# Changed wording of prompts
+
 # Questions for Sebby-is that too much to put in one definition? serparate def for closing message?
 
 # Need to do:
 # create def main() best practices
+# create def goodbye message
 
 
 # while True:
